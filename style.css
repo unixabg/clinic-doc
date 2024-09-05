@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+canvas {
+    max-width: 90%; /* Limit the width of the canvas */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid black;
+}
+textarea {
+    margin-top: 10px;
+    width: 90%; /* Increase width from 80% */
+    height: 200px; /* Increased height */
+    resize: none;
+}
+#submitButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

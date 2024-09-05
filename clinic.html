@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' cdnjs.cloudflare.com; img-src * data: blob: 'unsafe-inline';">
+    <link rel="stylesheet" href="style.css">
+    <title>Clinic Draw Doc</title>
+</head>
+<body>
+    <canvas id="drawingCanvas"></canvas>
+    <textarea id="textArea" placeholder="Type your notes here..."></textarea>
+    <button id="submitButton">Print</button> <!-- Submit button to handle the print -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="draw.js"></script> <!-- External script file -->
+    <script src="print.js"></script> <!-- External script file -->
+</body>
+</html>
+
