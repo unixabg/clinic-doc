@@ -8,13 +8,31 @@
     <title>Clinic Draw Doc</title>
 </head>
 <body>
+    <div class="input-fields">
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Last Name" maxlength="40" />
+        </div>
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="First Name" maxlength="40" />
+        </div>
+        <div>
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" />
+        </div>
+        <div>
+            <label for="calendarDay">Calendar Day:</label>
+            <input type="date" id="calendarDay" />
+        </div>
+    </div>
     <canvas id="drawingCanvas"></canvas>
     <textarea id="textArea" placeholder="Type your notes here..."></textarea>
-    <button id="submitButton">Print</button> <!-- Submit button to handle the print -->
+    <button id="submitButton">Print</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="draw.js"></script> <!-- External script file -->
-    <script src="print.js"></script> <!-- External script file -->
+    <script src="draw.js"></script>
+    <script src="print.js"></script>
 </body>
 </html>
 

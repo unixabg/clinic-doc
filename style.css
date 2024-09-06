@@ -3,22 +3,51 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
+
+.input-fields {
+    margin-bottom: 20px; /* More space before the canvas */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for input fields */
+    gap: 10px; /* Space between grid items */
+    width: 90%; /* Match the width of other elements */
+}
+
+.input-fields div {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+label {
+    font-size: 12px; /* Readable but not too large */
+    color: #333; /* Dark grey for better readability */
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="text"], input[type="date"] {
+    padding: 5px; /* Padding for better text visibility */
+    margin: 2px; /* Margin to prevent touching other elements */
+    width: 100%; /* Use full width of parent container */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
 canvas {
-    max-width: 90%; /* Limit the width of the canvas */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid black;
+    max-width: 90%; /* Limit canvas width to not overflow screen */
+    height: auto; /* Maintain aspect ratio based on width */
+    border: 1px solid black; /* Border to visually define canvas area */
 }
+
 textarea {
-    margin-top: 10px;
-    width: 90%; /* Increase width from 80% */
-    height: 200px; /* Increased height */
-    resize: none;
+    width: 90%; /* Wide enough to match other elements */
+    height: 150px; /* Enough space for multiple lines of text */
+    margin-top: 10px; /* Separate from elements above */
+    resize: vertical; /* Allow resizing only vertically */
 }
+
 #submitButton {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
+    padding: 5px 10px; /* Padding for better clickability */
+    margin-top: 10px; /* Space from the last element */
+    cursor: pointer; /* Visual cue for clickable element */
 }
+
