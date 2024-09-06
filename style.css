@@ -1,53 +1,65 @@
+/* Basic Reset and Body Styles */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center; /* Center content in the single grid cell */
     margin: 0;
+    //height: 100vh; /* Full viewport height */
+    //width: 100vw; /* Full viewport width */
+    //overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Container for Canvas Elements */
+.canvas-container {
+    position: relative; /* Establishes positioning context for children */
+    width: 80vw; /* Responsive width based on viewport */
+    height: 60vh; /* Responsive height based on viewport */
+    display: flex;
+    justify-content: center; /* Center content horizontally within the container */
+    align-items: center; /* Center content vertically within the container */
+}
+
+/* Canvas Styling */
+canvas {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    //object-fit: contain; /* Ensures the content fits without being cropped or distorted */
+    //position: absolute; /* Overlays canvases directly on top of each other within the container */
+}
+
+/* Styling for Interactive Elements (Input Fields, Textarea, Buttons) */
+.input-fields, textarea, button {
+    width: 90%; /* Responsive width based on viewport */
+    margin-top: 20px; /* Adds space above these elements */
+    display: block; /* Ensures elements are block level for margin auto to work */
+    z-index: 2; /* Ensures these elements are accessible */
 }
 
 .input-fields {
-    margin-bottom: 20px; /* More space before the canvas */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for input fields */
+    display: grid; /* Uses grid layout for arranging input fields */
+    grid-template-columns: repeat(2, 1fr); /* Two columns of input fields */
     gap: 10px; /* Space between grid items */
-    width: 90%; /* Match the width of other elements */
 }
 
-.input-fields div {
-    display: flex;
-    flex-direction: column; /* Stack label and input vertically */
-}
-
-label {
-    font-size: 12px; /* Readable but not too large */
-    color: #333; /* Dark grey for better readability */
-    margin-bottom: 5px; /* Space between label and input */
-}
-
+/* Specific Styling for Input Fields */
 input[type="text"], input[type="date"] {
-    padding: 5px; /* Padding for better text visibility */
+    padding: 5px; /* Padding for better interaction */
     margin: 2px; /* Margin to prevent touching other elements */
-    width: 100%; /* Use full width of parent container */
+    width: 100%; /* Full width of its container */
     box-sizing: border-box; /* Include padding and border in width */
 }
 
-canvas {
-    max-width: 90%; /* Limit canvas width to not overflow screen */
-    height: auto; /* Maintain aspect ratio based on width */
-    border: 1px solid black; /* Border to visually define canvas area */
-}
-
+/* Text Area Styling */
 textarea {
-    width: 90%; /* Wide enough to match other elements */
-    height: 150px; /* Enough space for multiple lines of text */
-    margin-top: 10px; /* Separate from elements above */
-    resize: vertical; /* Allow resizing only vertically */
+    height: 150px; /* Specific height for text area */
+    resize: vertical; /* Allows vertical resizing only */
 }
 
-#submitButton {
-    padding: 5px 10px; /* Padding for better clickability */
-    margin-top: 10px; /* Space from the last element */
-    cursor: pointer; /* Visual cue for clickable element */
+/* Button Styling */
+button {
+    padding: 5px 10px; /* Comfortable padding for clicking */
+    cursor: pointer; /* Indicates that the element is clickable */
+    background-color: #f0f0f0; /* Light grey background for visibility */
+    border: 1px solid #ccc; /* Subtle border styling */
+    border-radius: 5px; /* Rounded corners for aesthetic */
 }
 
